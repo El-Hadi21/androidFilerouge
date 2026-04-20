@@ -59,8 +59,16 @@ public class ControlActivity extends AppCompatActivity implements Menuable, Noti
     }
 
     @Override
-    public void onDataChange(int numFragment, Object object) {
-        Log.d(TAG, "onDataChange depuis fragment #" + numFragment + " | data=" + object);
+    public void onDataChange(int numFragment, Object object, int actionCode, Object argsAction) {
+        Log.d(TAG, "onDataChange depuis fragment #" + numFragment
+                + " | actionCode=" + actionCode
+                + " | argsAction=" + argsAction
+                + " | data=" + object);
+    }
+
+    @Override
+    public void onFragmentDisplayed(int fragmentId) {
+        Log.d(TAG, "onFragmentDisplayed fragment #" + fragmentId);
     }
 }
 
