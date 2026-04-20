@@ -17,4 +17,5 @@
     <string name="menu_desc_4">Menu 4</string>
     <string name="menu_desc_5">Menu 5</string>
     <string name="menu_desc_6">Menu 6</string>
+    <string name="issue_icon_desc">Icône de type d&#39;incident</string>
 </resources>

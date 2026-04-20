@@ -51,8 +51,6 @@ public class IssueAdapter extends ArrayAdapter<Issue> {
                     clickableIssue.onRatingBarChange(position, value, this, items);
                 }
             });
-
-            row.setOnClickListener(v -> clickableIssue.onClickItem(items, position));
         }
 
         return row;
