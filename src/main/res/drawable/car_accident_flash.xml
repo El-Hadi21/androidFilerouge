@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Flash d'urgence (feux clignotants) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="160dp"
+    android:viewportWidth="200"
+    android:viewportHeight="160">
+
+    <!-- Route -->
+    <path
+        android:pathData="M0,110 L200,110 L200,160 L0,160 Z"
+        android:fillColor="#555555"/>
+    <!-- Lignes de route -->
+    <path
+        android:pathData="M20,135 L60,135"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="butt"/>
+    <path
+        android:pathData="M80,135 L120,135"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="butt"/>
+    <path
+        android:pathData="M140,135 L180,135"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeLineCap="butt"/>
+
+    <!-- Carrosserie principale de la voiture (rouge) -->
+    <path
+        android:pathData="M30,90 Q32,70 60,68 L140,68 Q168,70 170,90 L170,115 L30,115 Z"
+        android:fillColor="#CC2200"/>
+    <!-- Toit de la voiture -->
+    <path
+        android:pathData="M65,68 Q70,48 100,46 Q130,48 135,68 Z"
+        android:fillColor="#AA1A00"/>
+    <!-- Pare-brise avant -->
+    <path
+        android:pathData="M68,67 Q73,52 100,50 Q127,52 132,67 Z"
+        android:fillColor="#AADDFF"
+        android:fillAlpha="0.85"/>
+
+    <!-- Roue avant gauche -->
+    <path
+        android:pathData="M55,115 m-20,0 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0"
+        android:fillColor="#222222"/>
+    <path
+        android:pathData="M55,115 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0"
+        android:fillColor="#888888"/>
+    <!-- Roue arrière droite -->
+    <path
+        android:pathData="M145,115 m-20,0 a20,20 0 1,0 40,0 a20,20 0 1,0 -40,0"
+        android:fillColor="#222222"/>
+    <path
+        android:pathData="M145,115 m-12,0 a12,12 0 1,0 24,0 a12,12 0 1,0 -24,0"
+        android:fillColor="#888888"/>
+
+    <!-- Phares éteints (foncés) -->
+    <path
+        android:pathData="M32,95 Q28,90 30,85 L45,85 Q47,90 44,95 Z"
+        android:fillColor="#331100"/>
+    <path
+        android:pathData="M168,95 Q172,90 170,85 L155,85 Q153,90 156,95 Z"
+        android:fillColor="#331100"/>
+
+    <!-- Triangle de signalisation (légèrement transparent pour l'effet flash) -->
+    <path
+        android:pathData="M100,30 L85,58 L115,58 Z"
+        android:fillColor="#FF3300"
+        android:fillAlpha="0.4"/>
+    <path
+        android:pathData="M100,35 L89,55 L111,55 Z"
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0.4"/>
+    <!-- Exclamation dans le triangle -->
+    <path
+        android:pathData="M100,40 L100,50"
+        android:strokeColor="#FF3300"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.4"/>
+    <path
+        android:pathData="M100,53 L100,56"
+        android:strokeColor="#FF3300"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeAlpha="0.4"/>
+</vector>
+
