@@ -3,26 +3,65 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/fond"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/desc_background" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#808B008B" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fragment 3"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="24dp" />
+        android:layout_gravity="center"
+        android:text="Carte des incidents\n(intégration Google Maps)"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/ll_filter_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="120dp"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tous"
+            android:textSize="12sp"
+            android:padding="6dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/chip_background" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accidents"
+            android:textSize="12sp"
+            android:padding="6dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/chip_background" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Obstacles"
+            android:textSize="12sp"
+            android:padding="6dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/chip_background" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Résolus"
+            android:textSize="12sp"
+            android:padding="6dp"
+            android:background="@drawable/chip_background" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_map_incidents"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="bottom" />
 
 </FrameLayout>

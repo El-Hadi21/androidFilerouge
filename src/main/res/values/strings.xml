@@ -1,21 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Fil rouge vide</string>
-    <string name="title_incident">Polytech app</string>
-    <string name="desc_animation">Animation incident routier</string>
-    <string name="desc_background">Image de fond route</string>
-    <string name="btn_defaut">DEFAUT</string>
-    <string name="btn_option1">OPTION1</string>
-    <string name="main_fragment_title">Main Fragment</string>
-    <string name="main_fragment_desc">this app automatically inflates by Android system because this Fragment is static</string>
-    <string name="btn_go">GO</string>
-    <string name="menu_label">Menu</string>
-    <string name="menu_desc_0">Menu 0</string>
-    <string name="menu_desc_1">Menu 1</string>
-    <string name="menu_desc_2">Menu 2</string>
-    <string name="menu_desc_3">Menu 3</string>
-    <string name="menu_desc_4">Menu 4</string>
-    <string name="menu_desc_5">Menu 5</string>
-    <string name="menu_desc_6">Menu 6</string>
-    <string name="issue_icon_desc">Icône de type d&#39;incident</string>
+    <string name="app_name">Accident Alert</string>
 </resources>
