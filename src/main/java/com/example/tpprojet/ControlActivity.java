@@ -56,6 +56,11 @@ public class ControlActivity extends AppCompatActivity implements Menuable, Noti
     @Override
     public void onClick(int numFragment) {
         Log.d(TAG, "onClick reçu depuis fragment #" + numFragment);
+        if (numFragment >= 0 && numFragment < tabFragments.length) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragmentScreen, tabFragments[numFragment])
+                    .commit();
+        }
     }
 
     @Override

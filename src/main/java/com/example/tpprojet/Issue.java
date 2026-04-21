@@ -7,14 +7,20 @@ public class Issue {
     private String description;
     private float gravity;
     private int imageResId;
+    private String environment;
 
     public Issue(String id, String title, String date, String description, float gravity, int imageResId) {
+        this(id, title, date, description, gravity, imageResId, "");
+    }
+
+    public Issue(String id, String title, String date, String description, float gravity, int imageResId, String environment) {
         this.id = id;
         this.title = title;
         this.date = date;
         this.description = description;
         this.gravity = gravity;
         this.imageResId = imageResId;
+        this.environment = environment;
     }
 
     public String getId() {
@@ -63,5 +69,13 @@ public class Issue {
 
     public void setImageResId(int imageResId) {
         this.imageResId = imageResId;
+    }
+
+    public String getEnvironment() {
+        return environment;
+    }
+
+    public void setEnvironment(String environment) {
+        this.environment = environment;
     }
 }
