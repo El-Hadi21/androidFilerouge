@@ -18,4 +18,13 @@
     <string name="menu_desc_5">Menu 5</string>
     <string name="menu_desc_6">Menu 6</string>
     <string name="issue_icon_desc">Icône de type d&#39;incident</string>
+    <string name="screen3_title_hint">Titre de l'incident</string>
+    <string name="screen3_desc_hint">Description</string>
+    <string name="screen3_environment_urban">Urbain</string>
+    <string name="screen3_environment_highway">Autoroute</string>
+    <string name="screen3_environment_rural">Rural</string>
+    <string name="screen3_submit">ENVOYER LE RAPPORT</string>
+    <string name="screen3_voice_prompt">Parlez maintenant</string>
+    <string name="screen3_voice_unavailable">Reconnaissance vocale indisponible</string>
+    <string name="screen3_fields_required">Veuillez compléter tous les champs</string>
 </resources>

@@ -61,11 +61,11 @@ public class Screen3Fragment extends Fragment {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Parlez maintenant");
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.screen3_voice_prompt));
         try {
             voiceLauncher.launch(intent);
         } catch (ActivityNotFoundException e) {
-            Toast.makeText(requireContext(), "Reconnaissance vocale indisponible", Toast.LENGTH_SHORT).show();
+            Toast.makeText(requireContext(), getString(R.string.screen3_voice_unavailable), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -96,7 +96,7 @@ public class Screen3Fragment extends Fragment {
             }
 
             if (title.isEmpty() || description.isEmpty() || environment == null) {
-                Toast.makeText(requireContext(), "Veuillez compléter tous les champs", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), getString(R.string.screen3_fields_required), Toast.LENGTH_SHORT).show();
                 return;
             }
 
