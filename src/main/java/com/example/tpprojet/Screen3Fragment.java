@@ -27,6 +27,8 @@ import java.util.Locale;
 
 public class Screen3Fragment extends Fragment {
 
+    private static final int ISSUE_LIST_FRAGMENT_INDEX = 1;
+
     private Notifiable notifiable;
     private EditText currentTargetEditText;
 
@@ -87,13 +89,13 @@ public class Screen3Fragment extends Fragment {
             String description = descInput.getText().toString().trim();
 
             int selectedId = environmentGroup.getCheckedRadioButtonId();
-            String environment = "";
+            String environment = null;
             if (selectedId != View.NO_ID) {
                 RadioButton selected = view.findViewById(selectedId);
                 environment = selected.getText().toString();
             }
 
-            if (title.isEmpty() || description.isEmpty() || environment.isEmpty()) {
+            if (title.isEmpty() || description.isEmpty() || environment == null) {
                 Toast.makeText(requireContext(), "Veuillez compléter tous les champs", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -102,7 +104,7 @@ public class Screen3Fragment extends Fragment {
             IssueList.getInstance().getItems().add(issue);
 
             if (notifiable != null) {
-                notifiable.onClick(1);
+                notifiable.onClick(ISSUE_LIST_FRAGMENT_INDEX);
             }
         });
 
