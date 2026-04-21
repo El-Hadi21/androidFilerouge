@@ -1,28 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <ImageView
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_issue_title"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/fond"
-        android:scaleType="centerCrop"
-        android:contentDescription="@string/desc_background" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#808B008B" />
-
-    <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Fragment 3"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:layout_gravity="top|center_horizontal"
-        android:layout_marginTop="24dp" />
+        android:layout_marginBottom="12dp"
+        app:endIconDrawable="@drawable/ic_mic"
+        app:endIconMode="custom"
+        app:hintEnabled="true">
 
-</FrameLayout>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_issue_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/screen3_title_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_issue_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        app:endIconDrawable="@drawable/ic_mic"
+        app:endIconMode="custom"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_issue_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/screen3_desc_hint" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/group_environment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_environment_urban"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen3_environment_urban" />
+
+        <RadioButton
+            android:id="@+id/radio_environment_highway"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen3_environment_highway" />
+
+        <RadioButton
+            android:id="@+id/radio_environment_rural"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen3_environment_rural" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_submit_issue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/screen3_submit" />
+
+</LinearLayout>
