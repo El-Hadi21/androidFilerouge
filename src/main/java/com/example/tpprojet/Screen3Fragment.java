@@ -83,14 +83,19 @@ public class Screen3Fragment extends Fragment {
         descLayout.setEndIconOnClickListener(v -> startVoiceRecognition(descInput));
 
         submitButton.setOnClickListener(v -> {
-            String title = titleInput.getText() != null ? titleInput.getText().toString().trim() : "";
-            String description = descInput.getText() != null ? descInput.getText().toString().trim() : "";
+            String title = titleInput.getText().toString().trim();
+            String description = descInput.getText().toString().trim();
 
             int selectedId = environmentGroup.getCheckedRadioButtonId();
             String environment = "";
             if (selectedId != View.NO_ID) {
                 RadioButton selected = view.findViewById(selectedId);
                 environment = selected.getText().toString();
+            }
+
+            if (title.isEmpty() || description.isEmpty() || environment.isEmpty()) {
+                Toast.makeText(requireContext(), "Veuillez compléter tous les champs", Toast.LENGTH_SHORT).show();
+                return;
             }
 
             Issue issue = IssueFactory.createIssue(title, description, environment);
